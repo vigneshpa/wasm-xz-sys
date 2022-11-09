@@ -6,7 +6,7 @@
   "scripts": {
     "build":"./build.sh && env ESM_BUILD=1 ./build.sh"
   },
-  "bin": "bon/bin/xz.js",
+  "bin": "bin/bin/xz.js",
   "keywords": [
     "xz",
     "lzma",
