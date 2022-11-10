@@ -1,12 +1,27 @@
 {
   "name": "wasm-xz-sys",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "XZ built with Emscripten SDK as WASM",
-  "main": "dist/xz.mjs",
+  "main": "bin/bin/xz.js",
+  "browser": "dist/bin/xz.mjs",
+  "types": "emscripten.d.ts",
   "scripts": {
-    "build":"./build.sh && env ESM_BUILD=1 ./build.sh"
+    "build": "./build.sh && env ESM_BUILD=1 ./build.sh"
   },
-  "bin": "bin/bin/xz.js",
+  "bin": {
+    "wasm-xz": "bin/bin/xz.js",
+    "wasm-xz-sys": "bin/bin/xz.js",
+    "wasm-xzdec": "bin/bin/xzdec.js"
+  },
+  "man": [
+    "bin/share/man/man1/xz.1",
+    "bin/share/man/man1/xzdec.1"
+  ],
+  "files": [
+    "bin",
+    "dist",
+    "build.sh"
+  ],
   "keywords": [
     "xz",
     "lzma",
@@ -16,5 +31,6 @@
     "webassembly"
   ],
   "author": "vignesh <vignesh-p@outlook.com>",
+  "repository": "https://github.com/vigneshpa/wasm-xz-ts",
   "license": "MIT"
 }
